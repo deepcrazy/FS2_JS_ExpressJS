@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Welcome</title>
+
+    <script type="text/javascript" src="./js/interface.js"></script>
+
+</head>
+
+<body>
+    
+    <div id="listsDiv">
+        <ol type="1">
+
+            <!-- <form action="/postReq" method="POST">
+                <button type="submit"> Submit </button>
+            </form> -->
+
+            <li id="link1" onclick="postReqFunction()"> Click here to test POST request </li>
+            <li id="link2" onclick="putReqFunction()"> Click here to test PUT request </li>
+            <li id="link3" onclick="deleteReqFunction()"> Click here to test DELETE request </li>
+
+        </ol>
+        <p id="clickMsg"></p>
+    </div>
+
+    <section>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    </section>
+
+</body>
+
+</html>
