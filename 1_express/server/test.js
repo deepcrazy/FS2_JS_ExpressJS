@@ -8,5 +8,5 @@ try {
     appServer.listen(port, () => console.log('Ok on port: ' + port));
 
 } catch (error) {
-    console.log("Error occured: " + error);
+    console.log("Error occurred: " + error);
 }
