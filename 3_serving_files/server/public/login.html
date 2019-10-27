@@ -9,7 +9,7 @@
         <form id="userForm" method="GET">
             <p id="homePageMsg"> Welcome to Login Page..!!</p>
             <label for="username"> Enter your name</label>
-            <input type="text" id="username">
+            <input style="width: 25%;" type="text" id="username" placeholder="Enter name of length > 4">
             <button type="submit" id="submitUsername">Submit</button>
         </form>
 
@@ -19,19 +19,17 @@
     <section>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script>
-            document.getElementById("submitUsername").onclick = function (event){
+            document.getElementById("submitUsername").onclick = function (event) {
                 event.preventDefault();
-                // console.log("coming on script tag..!!");
                 loginDetails = document.getElementById("username").value;
                 console.log("Username: " + loginDetails);
-                axios.get('/login/loginDetails='+ loginDetails)
-                .then(function(response) {
-                    console.log("success..!!");
-                    console.log(response.data);
-                    document.getElementById("displayUserDetails").innerHTML = response.data;
-                }, function (error){
-                    console.log("Exception has occured: " + error);
-                })
+                axios.get('/login/loginDetails=' + loginDetails)
+                    .then(function (response) {
+                        console.log(response.data);
+                        document.getElementById("displayUserDetails").innerHTML = response.data;
+                    }, function (error) {
+                        console.log("Exception has occured: " + error);
+                    })
             }
         </script>
     </section>

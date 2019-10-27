@@ -11,51 +11,12 @@
             <li><a href="home"> Home Page </a></li>
             <li><a href="login"> Login </a></li>
             <li><a href="contact"> Contact Us </a></li>
-            <!-- id="home" onclick="getHomePage()" -->
-            <!-- <li id="login" onclick="putReqFunction()"> Login </li> -->
-            <!-- <li id="contactUs" onclick="deleteReqFunction()"> Contact Us </li> -->
         </ol>
         <p id="clickMsg"></p>
     </div>
 
     <section>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <!-- <script src="/interface.js"></script> -->
-
-        <script>
-            function getHomePage() {
-                axios.get('/home')
-                    .then(function (response) {
-                        console.log("opening home page..!!");
-                        console.log(response.data);
-                        // document.getElementById("home").setAttribute('href', response.data);
-                        document.getElementById("clickMsg").innerHTML = response.data;
-                    })
-                    .catch(function (error) {
-                        console.log("Exception occured: " + error);
-                    })
-            }
-
-            // function putReqFunction() {
-            //     axios.put('/putReq')
-            //         .then(function (response) {
-            //             document.getElementById("clickMsg").innerHTML = response.data;
-            //         })
-            //         .catch(function (error) {
-            //             console.log("Exception occured: " + error);
-            //         })
-            // }
-
-            // function deleteReqFunction() {
-            //     axios.delete('/deleteReq')
-            //         .then(function (response) {
-            //             document.getElementById('clickMsg').innerHTML = response.data;
-            //         })
-            //         .catch(function (error) {
-            //             console.log("Exception occured: " + error);
-            //         })
-            // }
-        </script>
     </section>
 
 </body>
