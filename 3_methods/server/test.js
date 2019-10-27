@@ -23,14 +23,17 @@ try {
         res.sendFile(__dirname + "/index.html");
     });
 
+    //  For post request
     appServer.post('/postReq', (req, res) => {
         res.send("This is a 'POST' Request..!!");
     });
 
+    //  For put request
     appServer.put('/putReq', (req, res) => {
         res.send("This is a 'PUT' Request..!!");
     });
 
+    //  For Delete request
     appServer.delete('/deleteReq', (req, res) => {
         res.send("This is a 'DELETE' Request..!!");
     });
@@ -39,5 +42,5 @@ try {
         console.log("OK on port: " + port);
     });
 } catch (error) {
-    console.log("Error occured: " + error);
+    console.log("Error occurred: " + error);    //  Error handling
 }
